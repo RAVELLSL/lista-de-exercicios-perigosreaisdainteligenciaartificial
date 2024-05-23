@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caderno de Exercícios</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #343a40;
+    color: #fff;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .sidebar h2 {
+    margin-top: 0;
+    color: #fff;
+  }
+
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .sidebar li {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .sidebar a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+  }
+
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: justify;
+  }
+
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+
+  form {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  h3 {
+    margin-top: 20px;
+    color: #333;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+  }
+
+  button:hover {
+    background-color: #23272b;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .modal-content h2 {
+    margin-top: 0;
+  }
+
+  .modal-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .modal-content li {
+    margin-bottom: 5px;
+  }
+
+  .modal-content button {
+    padding: 8px 15px;
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+
+  .modal-content button:hover {
+    background-color: #23272b;
+  }
+
+  @media screen and (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    .sidebar {
+      width: 100%;
+      max-width: none;
+      margin-bottom: 20px;
+    }
+
+    .main-content {
+      width: 100%;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="main-content" id="main-content">
+    <h1>PERIGOS REAIS DA INTELIGÊNCIA ARTIFICIAL</h1>
+    <form id="exercises-form">
+      <p>1. O que é viés algorítmico?</p>
+      <label><input type="radio" name="q1" value="a"> a) A tendência dos algoritmos em priorizar tarefas repetitivas</label>
+      <label><input type="radio" name="q1" value="b"> b) A capacidade dos algoritmos de aprender com dados históricos</label>
+      <label><input type="radio" name="q1" value="c"> c) A influência de preconceitos humanos nos resultados dos algoritmos</label>
+      <label><input type="radio" name="q1" value="d"> d) A eficiência dos algoritmos em processar grandes volumes de dados</label>
+      <label><input type="radio" name="q1" value="e"> e) A aplicação de IA em setores específicos da indústria</label>
+
+      <p>2. Como a manipulação de mídia pode ser realizada com IA?</p>
+      <label><input type="radio" name="q2" value="a"> a) Criando representações gráficas detalhadas</label>
+      <label><input type="radio" name="q2" value="b"> b) Desenvolvendo algoritmos de otimização</label>
+      <label><input type="radio" name="q2" value="c"> c) Utilizando deepfakes para alterar imagens e vídeos</label>
+      <label><input type="radio" name="q2" value="d"> d) Automatizando tarefas administrativas</label>
+      <label><input type="radio" name="q2" value="e"> e) Aumentando a precisão dos diagnósticos médicos</label>
+
+      <p>3. Qual é um potencial impacto da IA no emprego?</p>
+      <label><input type="radio" name="q3" value="a"> a) Aumento da satisfação no trabalho</label>
+      <label><input type="radio" name="q3" value="b"> b) Criação de mais empregos do que elimina</label>
+      <label><input type="radio" name="q3" value="c"> c) Desemprego em massa devido à automação</label>
+      <label><input type="radio" name="q3" value="d"> d) Melhora na segurança do trabalho</label>
+      <label><input type="radio" name="q3" value="e"> e) Nenhuma alteração significativa no mercado de trabalho</label>
+
+      <p>4. Como a IA pode ser usada em ataques cibernéticos?</p>
+      <label><input type="radio" name="q4" value="a"> a) Automatizando respostas de atendimento ao cliente</label>
+      <label><input type="radio" name="q4" value="b"> b) Otimizando sistemas de transporte</label>
+      <label><input type="radio" name="q4" value="c"> c) Identificando vulnerabilidades em sistemas de segurança</label>
+      <label><input type="radio" name="q4" value="d"> d) Melhorando a precisão dos sistemas de recomendação</label>
+      <label><input type="radio" name="q4" value="e"> e) Desenvolvendo novas receitas culinárias</label>
+
+      <p>5. Quais são os riscos associados ao uso indevido de dados pessoais por IA?</p>
+      <label><input type="radio" name="q5" value="a"> a) Melhoria na personalização de serviços</label>
+      <label><input type="radio" name="q5" value="b"> b) Aumento da eficiência operacional</label>
+      <label><input type="radio" name="q5" value="c"> c) Violação de privacidade e segurança dos dados</label>
+      <label><input type="radio" name="q5" value="d"> d) Redução de custos de TI</label>
+      <label><input type="radio" name="q5" value="e"> e) Desenvolvimento de novos produtos</label>
+
+      <p>6. Qual é uma preocupação sobre armas autônomas movidas por IA?</p>
+      <label><input type="radio" name="q6" value="a"> a) Aumento da precisão nas entregas de pacotes</label>
+      <label><input type="radio" name="q6" value="b"> b) Substituição de soldados humanos em combate</label>
+      <label><input type="radio" name="q6" value="c"> c) Possibilidade de mal funcionamento e ataques indiscriminados</label>
+      <label><input type="radio" name="q6" value="d"> d) Melhoria na qualidade da educação</label>
+      <label><input type="radio" name="q6" value="e"> e) Crescimento no setor de entretenimento</label>
+
+      <p>7. Como a IA pode ser utilizada para manipulação política?</p>
+      <label><input type="radio" name="q7" value="a"> a) Analisando grandes volumes de dados para prever tendências de mercado</label>
+      <label><input type="radio" name="q7" value="b"> b) Criando campanhas de marketing personalizadas</label>
+      <label><input type="radio" name="q7" value="c"> c) Espalhando desinformação e influenciando opiniões públicas</label>
+      <label><input type="radio" name="q7" value="d"> d) Melhorando a eficiência dos serviços públicos</label>
+      <label><input type="radio" name="q7" value="e"> e) Desenvolvendo novos tratamentos médicos</label>
+
+      <p>8. Qual é um risco da deterioração das habilidades humanas devido à IA?</p>
+      <label><input type="radio" name="q8" value="a"> a) Aumento da criatividade</label>
+      <label><input type="radio" name="q8" value="b"> b) Melhora nas habilidades interpessoais</label>
+      <label><input type="radio" name="q8" value="c"> c) Perda de competências críticas devido à automação excessiva</label>
+      <label><input type="radio" name="q8" value="d"> d) Expansão do conhecimento técnico</label>
+      <label><input type="radio" name="q8" value="e"> e) Aumento da colaboração entre equipes</label>
+
+      <p>9. Como a discriminação algorítmica pode ocorrer em sistemas de IA?</p>
+      <label><input type="radio" name="q9" value="a"> a) Através de decisões imparciais e equitativas</label>
+      <label><input type="radio" name="q9" value="b"> b) Por meio da análise de grandes volumes de dados</label>
+      <label><input type="radio" name="q9" value="c"> c) Por causa de preconceitos embutidos nos dados de treinamento</label>
+      <label><input type="radio" name="q9" value="d"> d) Pelo aumento da diversidade nas equipes de desenvolvimento</label>
+      <label><input type="radio" name="q9" value="e"> e) Pela implementação de sistemas de verificação e balanceamento</label>
+
+      <p>10. Qual é um exemplo de impacto negativo da IA na privacidade dos usuários?</p>
+      <label><input type="radio" name="q10" value="a"> a) Melhora na experiência do usuário</label>
+      <label><input type="radio" name="q10" value="b"> b) Aumento da eficiência de atendimento ao cliente</label>
+      <label><input type="radio" name="q10" value="c"> c) Monitoramento contínuo e invasivo sem consentimento</label>
+      <label><input type="radio" name="q10" value="d"> d) Redução de custos operacionais</label>
+      <label><input type="radio" name="q10" value="e"> e) Aceleração no desenvolvimento de produtos</label>
+
+      <button type="button" onclick="checkAnswers()">Responder</button>
+    </form>
+  </div>
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h2>Sua Pontuação</h2>
+    <p id="score"></p>
+    <h3>Respostas Corretas</h3>
+    <ul id="correct-answers"></ul>    
+    <button onclick="closeModal()">Fechar</button>
+  </div>
+</div>
+
+<script>
+function checkAnswers() {
+  const correctAnswers = [
+    { answer: 'c', explanation: 'O viés algorítmico ocorre quando os preconceitos presentes nos dados de treinamento são refletidos nos resultados produzidos pelos algoritmos de IA.' },
+    { answer: 'c', explanation: 'Deepfakes são uma tecnologia de IA que permite criar imagens e vídeos falsos, manipulando mídia de maneira realista.' },
+    { answer: 'c', explanation: 'A automação conduzida pela IA pode substituir muitos empregos tradicionais, levando ao desemprego em larga escala.' },
+    { answer: 'c', explanation: 'A IA pode ser utilizada para detectar e explorar falhas de segurança em sistemas de TI, tornando os ataques cibernéticos mais sofisticados.' },
+    { answer: 'c', explanation: 'O uso indevido de dados pessoais pode levar à invasão da privacidade e comprometer a segurança dos dados dos indivíduos.' },
+    { answer: 'c', explanation: 'Armas autônomas podem funcionar de maneira imprevisível ou ser utilizadas de forma inadequada, resultando em danos indiscriminados.' },
+    { answer: 'c', explanation: 'A IA pode ser usada para criar e disseminar informações falsas, influenciando o comportamento e as opiniões das pessoas em contextos políticos.' },
+    { answer: 'c', explanation: 'A dependência excessiva de sistemas automatizados pode levar à diminuição das habilidades humanas essenciais, como resolução de problemas e pensamento crítico.' },
+    { answer: 'c', explanation: 'Se os dados usados para treinar os algoritmos contêm preconceitos, esses preconceitos podem ser refletidos nas decisões dos sistemas de IA.' },
+    { answer: 'c', explanation: 'A IA pode ser usada para monitorar atividades dos usuários de forma invasiva e sem consentimento, comprometendo a privacidade individual.' }
+  ];
+
+  let score = 0;
+  const studentAnswers = [];
+  for (let i = 1; i <= correctAnswers.length; i++) {
+    const selectedAnswer = document.querySelector(`input[name=q${i}]:checked`);
+    if (selectedAnswer) {
+      studentAnswers.push({ question: i, selected: selectedAnswer.value, correct: correctAnswers[i - 1].answer, explanation: correctAnswers[i - 1].explanation });
+      if (selectedAnswer.value === correctAnswers[i - 1].answer) {
+        score++;
+      }
+    } else {
+      studentAnswers.push({ question: i, selected: null, correct: correctAnswers[i - 1].answer, explanation: correctAnswers[i - 1].explanation });
+    }
+  }
+
+  const modal = document.getElementById('modal');
+  const scoreDisplay = document.getElementById('score');
+  const correctAnswersList = document.getElementById('correct-answers');
+
+  scoreDisplay.textContent = `Pontuação: ${score}/${correctAnswers.length}`;
+  correctAnswersList.innerHTML = '';
+
+  studentAnswers.forEach((answer, index) => {
+    const listItem = document.createElement('li');
+    listItem.innerHTML = `<strong>Questão ${answer.question}:</strong> Sua resposta: ${answer.selected || 'Não respondida'}<br>Resposta correta: ${answer.correct}<br>${answer.explanation}`;
+    correctAnswersList.appendChild(listItem);
+  });
+
+  modal.style.display = 'block';
+}
+
+function closeModal() {
+  const modal = document.getElementById('modal');
+  modal.style.display = 'none';
+}
+</script>
+
+</body>
+</html>
